@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load thumbnail %}
+{% block content %}
+    <style>
+        .jumbotron {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: gray;
+        }
+    </style>
+    <div class="jumbotron">
+        <h1 class="display-4" align="center"><b>Galleries</b></h1>
+    </div>
+    {#        <div>#}
+    {#            {% for image in images %}#}
+    {#                {% thumbnail image.image "250x301" crop="center" as im %}#}
+    {#                    <img src="{{ im.url }}" class="img-fluid" alt="Responsive image" style="padding-bottom: 10px">#}
+    {#                {% endthumbnail %}#}
+    {#            {% endfor %}#}
+    {#        </div>#}
+
+    <div class="row">
+    {% for image in images %}
+        <div class="col-md-4">
+            <div class="thumbnail">
+                    <img src="{{ image.image.url }}" alt="Lights" height="300" width="300" style="width: 100%">
+                    <div class="caption">
+                        <p>{{ image.caption }}</p>
+                    </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

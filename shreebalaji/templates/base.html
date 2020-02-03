@@ -1,0 +1,264 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body style="margin: 15px;">
+<header>
+    <div class="top-header">
+        <table align="center" style="width: 100%">
+            <tr>
+                <td>
+                    <div class=" float-right">
+                        <i class="fas fa-phone mr-3" title="phone"></i> +977 14483582 |
+                        <i class="fas fa-envelope mr-3" title="email"></i> tmbalasingh@gmail.com |
+                        <i class="fas fa-home mr-3" title="address"></i> Head office- New Baneswor, Kathmandu, Nepal
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="header">
+        <table align="center" style="width: 100%">
+            <tr>
+                <td><img src="{% static 'images/logo.png' %}" height="100" width="120"></td>
+                <td>
+                    <h1>ShreeBalaji Hydro and Engineering Pvt.Ltd</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table align="center" style="width: 100%">
+            <tr>
+
+                <td>
+                    <marquee style="color: red;">A complete solution for design, fabrication and erection of steel
+                        structure.
+                    </marquee>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'shreebalaji:index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'shreebalaji:services' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'shreebalaji:gallaries' %}">Galleries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'shreebalaji:aboutus' %}">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'shreebalaji:ongoing' %}">On-going Projects</a>
+                        <a class="dropdown-item" href="{% url 'shreebalaji:completed' %}">Completed Projects</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'shreebalaji:contactus' %}">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+<div style="padding-bottom: 10px"></div>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4">
+
+    <div style="background-color: #6351ce;">
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                    <h6 class="mb-0">Get connected with us on social networks!</h6>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                    <!-- Facebook -->
+                    <a class="fb-ic">
+                        <i class="fab fa-facebook-f white-text mr-4"> </i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="tw-ic">
+                        <i class="fab fa-twitter white-text mr-4"> </i>
+                    </a>
+                    <!-- Google +-->
+                    <a class="gplus-ic">
+                        <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                    </a>
+                    <!--Linkedin -->
+                    <a class="li-ic">
+                        <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic">
+                        <i class="fab fa-instagram white-text"> </i>
+                    </a>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                <!-- Content -->
+                <h6 class="text-uppercase font-weight-bold">ShreeBalaji Hydro and Engineering Pvt.Ltd</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <div style="padding: 10px;">
+                    <img src="{% static 'images/logo.png' %}" height="100" width="120">
+                </div>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Services</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    Penstock pipe & Head race pipe
+                </p>
+                <p>
+                    Gates with its accessories
+                </p>
+                <p>Stop log with its accessories</p>
+                <p>Communication Towers</p>
+                <p>
+                    <a href="{% url 'shreebalaji:services' %}">more...</a>
+                </p>
+
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="{% url 'shreebalaji:aboutus' %}">About Us</a>
+                </p>
+                <p>
+                    <a href="{% url 'shreebalaji:gallaries' %}">Galleries</a>
+                </p>
+                <p>
+                    <a href="{% url 'shreebalaji:contactus' %}">Contact Us</a>
+                </p>
+                  <p>
+                    <a href="{% url 'shreebalaji:ongoing' %}">OnGoing Projects</a>
+                </p>
+                  <p>
+                    <a href="{% url 'shreebalaji:completed' %}">Completed Projects</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fas fa-home mr-3"></i> Head office- New Baneswor, Kathmandu, Nepal</p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> tmbalasingh@gmail.com</p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> shree.bhe@gmail.com</p>
+                </p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> +977 14483582
+                <p>
+                <div>
+                 <img src="{% static 'images/map.png' %}" height="200" width="250">
+            </div>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <P>ShreeBalaji Hydro and Engineering Pvt.Ltd</p>
+        <p>Featured contents are <a href="https://bootsnipp.com/license">MIT license.</a> </p>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

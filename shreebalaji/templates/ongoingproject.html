@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        .jumbotron {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: gray;
+        }
+    </style>
+    <div class="jumbotron">
+        <h1 class="display-4" align="center"><b>OnGoing Projects</b></h1>
+    </div>
+    <div class="row">
+        {% for projectinfo in project %}
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ projectinfo.title }}</h5>
+                        <p class="card-text">{{ projectinfo.descriptions | safe }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

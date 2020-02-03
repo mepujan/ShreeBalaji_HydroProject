@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load thumbnail %}
+{% block content %}
+    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" align="center"
+         style="padding-bottom: 20px">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="1000">
+                <img src="{% static 'images/firstslide.jpg' %}" alt="..." style="height: 400px;width: 1024px">
+            </div>
+            {% for banner in banners %}
+                <div class="carousel-item" data-interval="1000">
+                    {% thumbnail banner.image "1024x400" crop="center" as im %}
+                        <img src="{{ im.url }}" alt="">
+                    {% endthumbnail %}
+                </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="card w-100">
+     <div class="card-header text-center">
+            <h2> About Company</h2>
+        </div>
+        <div class="card-body">
+            <div align="center" style="padding-bottom: 5px">
+                  <img src="{% static 'images/logo.png' %}" alt="logo"height="100px" width="120px">
+            </div>
+            <p class="card-text" align="justify">
+            <b>ShreeBalaji Hydro and Engineering Pvt. Ltd</b> was established in the year 2075 under Companies Act 2006 with
+            <b>registration number 189101/74/075 and VAT number 606714822</b>. Established under Private Firm Registered Act
+            2014, our company was first registered with the name Shree Balaji Engineering works which was a proprietor
+            company with its registration number 40983/1683 and VAT number as 601057621.<br/><br/> The head office of the company
+            is located at <b>New Baneshwor, Kathmandu, Nepal</b> . In short this works in the field of Erection of Hydro
+            mechanical and Structural Engineering Services since 2013. Our key motive is creating an outstanding
+            experience for each and every one of our clients.<br/><br/>
+
+            We provide excellent commitment in field of <b>planning, design, fabrication, installation, quality management
+            and testing & commissioning</b>. Our experienced, knowledgeable team can perform detail engineering, fabrication
+            and installation of all the hydro-mechanical items and structures such as Headrace and Penstock pipes, Bell
+            mouths, Gates and Stop logs, Hoisting, Bends, Trash racks, Bifurcations, Flushing Pipes, Draft Tubes,
+            Expansion Joints, etc. We ensure you timely project completion, end-to-end quality management and budget
+            control.
+            </p>
+            <a href="{% url 'shreebalaji:aboutus' %}" class="btn btn-primary">Explore More</a>
+        </div>
+    </div>
+    <div class="card text">
+        <div class="card-header text-center">
+            <h2>Objectives of Company </h2>
+        </div>
+        <div class="card-body">
+            <p class="card-text-left">
+            <ul>
+                <li>To work in field of Hydro & Electromechanical equipment.
+                </li>
+                <li>Perform fabrication related work of Roof Trusses, Suspension Bridges, Truss bridge, Vertical and
+                    Underground Storage tanks, Penstock pipes, Gates etc.
+                </li>
+                <li>To provide service based task or perform task of heavy equipments</li>
+                <li>To train the local manpower to carry out the Hydro mechanical works.
+                </li>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <div style="padding-bottom: 10px"></div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">OnGoing Projects</h3>
+                    <h6 class="card-subtitle mb-2 text-muted">1. Gelung Khola Hydro Electric Project (3.2 MW),
+                        Sindhupalchowk</h6>
+                    <p class="card-text">
+                    <ul>
+                        <li>Client: Gelung Khola Hydropower Company Ltd.</li>
+                        <li>Scope of Work: Installation of penstock pipes, headrace pipes, bends, saddle plates, wear
+                            plates, reducers.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">2. Arun Kaveli Hydro Electric Project (25 MW), Ilam</h6>
+                    <p class="card-text">
+                    <ul>
+                        <li>Client: Api Hydromechinal Pvt. Ltd.</li>
+                        <li>Scope of Work: Overall Monorail Hoisting Structures.</li>
+                    </ul>
+                    </p>
+                    <a href="{% url 'shreebalaji:ongoing' %}" class="btn btn-primary">Explore More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Completed Projects</h3>
+                    <h6 class="card-subtitle mb-2 text-muted">1. Upper Mai Hydropower Project (9.98 MW)</h6>
+                    <p class="card-text">
+                    <ul>
+                        <li>Client: Mai Valley Hydro Power Company</li>
+                        <li>Scope of Work: Fabrication and Installation of Radial Gate at Undersluice, Intake Gate,
+                            Flushing Gate, Inlet & Outlet Gate, Sediment Flushing Gate at Settling Basin, overflow
+                            Stoplog, Stoplog at Undersluice, Fine Trash Rack at Settling Basin & Forebay Outlet & many
+                            more.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">2. Mai khola HPP (22MW)</h6>
+                    <p class="card-text">
+                    <ul>
+                        <li>Client: Sanima Hydropower Pvt. Ltd</li>
+                        <li>Scope of work: Fabrication and Installation of Intake Stoplog, Undersluice Stoplog, Draft
+                            Tube, Intake overflow.
+                        </li>
+                    </ul>
+                    </p>
+                    <a href="{% url 'shreebalaji:completed' %}" class="btn btn-primary">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
