@@ -1,0 +1,8 @@
+venv/
+db.sqlite
+*/migrations
+tcl
+media
+staticfiles
+procfile
+*/__pycache__/*
